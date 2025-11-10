@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://75w0mq1kgr4m"]
+
+[ext_resource type="Texture2D" uid="uid://cbb0gwgbqfgk" path="res://fatboi.png" id="1_212u4"]
+[ext_resource type="Texture2D" uid="uid://y6qedx426xax" path="res://coin.png" id="2_1cjhn"]
+[ext_resource type="PackedScene" uid="uid://cmhqfsj1751q7" path="res://amountbuttons.tscn" id="3_d6bfa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vui07"]
+bg_color = Color(0.92855, 0.30526, 0.79884, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Item" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vui07")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+
+[node name="ItemImage" type="TextureRect" parent="MarginContainer/VBox/HBox"]
+layout_mode = 2
+texture = ExtResource("1_212u4")
+stretch_mode = 4
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer/VBox/HBox"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/VBox/HBox/VBox"]
+layout_mode = 2
+text = "FatBoi"
+
+[node name="Type" type="Label" parent="MarginContainer/VBox/HBox/VBox"]
+layout_mode = 2
+text = "Weapon
+"
+
+[node name="Costbox" type="HBoxContainer" parent="MarginContainer/VBox/HBox/VBox"]
+layout_mode = 2
+
+[node name="Cost" type="Label" parent="MarginContainer/VBox/HBox/VBox/Costbox"]
+layout_mode = 2
+text = "100"
+
+[node name="CoinIcon" type="TextureRect" parent="MarginContainer/VBox/HBox/VBox/Costbox"]
+layout_mode = 2
+texture = ExtResource("2_1cjhn")
+
+[node name="Amountbuttons" parent="MarginContainer/VBox" instance=ExtResource("3_d6bfa")]
+layout_mode = 2

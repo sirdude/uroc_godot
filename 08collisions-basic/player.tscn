@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7vr4vbx87eah"]
+
+[ext_resource type="Script" uid="uid://blputfohyifys" path="res://player.gd" id="1_17era"]
+[ext_resource type="Texture2D" uid="uid://c4sanbh7i3ydc" path="res://icon.svg" id="1_tgqhe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcsof"]
+size = Vector2(119, 124)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_17era")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tgqhe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_dcsof")
+
+[node name="score_label" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = -100.0
+offset_right = 30.0
+offset_bottom = -77.0
+grow_horizontal = 2
+text = "Score: 0"

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmhqfsj1751q7"]
+
+[ext_resource type="Texture2D" uid="uid://dps8fan1kjdrs" path="res://up.png" id="1_vc7r5"]
+[ext_resource type="Texture2D" uid="uid://xafgw5ux5rvb" path="res://down.png" id="2_1q7vt"]
+
+[node name="Amountbuttons" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UpButton" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("1_vc7r5")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="TextureRect" type="ColorRect" parent="PanelContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+horizontal_alignment = 1
+
+[node name="DownButton" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("2_1q7vt")

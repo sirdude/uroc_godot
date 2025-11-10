@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://0x628y10lmia"]
+
+[ext_resource type="Texture2D" uid="uid://c2shpla4ru8ee" path="res://icon.svg" id="1_7g6m0"]
+[ext_resource type="Script" uid="uid://nmf3hnsn6l8l" path="res://Game/Chars/Emily/emily.gd" id="1_58c17"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jsn5t"]
+radius = 19.105
+
+[node name="Emily" type="CharacterBody2D"]
+collision_layer = 8
+script = ExtResource("1_58c17")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.5, 0.499999)
+scale = Vector2(0.304688, 0.289062)
+texture = ExtResource("1_7g6m0")
+
+[node name="Hint" type="Label" parent="."]
+visible = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -12.0
+offset_top = -48.0
+offset_right = 8.0
+offset_bottom = -25.0
+grow_horizontal = 2
+text = "[E]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_layer = 9
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CircleShape2D_jsn5t")
+
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]

@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp5krns1gcshk"]
+
+[ext_resource type="Script" uid="uid://c8uxx2dbwo7ff" path="res://main_menu.gd" id="1_ve07k"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ve07k")
+
+[node name="vbox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -46.5
+offset_right = 82.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="vbox"]
+layout_mode = 2
+text = "Welcome to the Intro"
+
+[node name="NewGameButton" type="Button" parent="vbox"]
+layout_mode = 2
+text = "New Game"
+
+[node name="PlayMovieButton" type="Button" parent="vbox"]
+layout_mode = 2
+text = "PlayMovie"
+
+[node name="QuitButton" type="Button" parent="vbox"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="vbox/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="vbox/PlayMovieButton" to="." method="_on_play_movie_button_pressed"]
+[connection signal="pressed" from="vbox/QuitButton" to="." method="_on_quit_button_pressed"]

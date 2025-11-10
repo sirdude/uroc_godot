@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://do82mj2ptmh2y"]
+
+[ext_resource type="PackedScene" uid="uid://75w0mq1kgr4m" path="res://item.tscn" id="1_ej57w"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.5
+offset_top = -42.0
+offset_right = 224.5
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Item" parent="GridContainer" instance=ExtResource("1_ej57w")]
+layout_mode = 2
+
+[node name="Item2" parent="GridContainer" instance=ExtResource("1_ej57w")]
+layout_mode = 2
+
+[node name="Item3" parent="GridContainer" instance=ExtResource("1_ej57w")]
+layout_mode = 2
+
+[node name="Item4" parent="GridContainer" instance=ExtResource("1_ej57w")]
+layout_mode = 2
+
+[node name="Item5" parent="GridContainer" instance=ExtResource("1_ej57w")]
+layout_mode = 2
+
+[node name="Item6" parent="GridContainer" instance=ExtResource("1_ej57w")]
+layout_mode = 2
+
+[node name="Item7" parent="GridContainer" instance=ExtResource("1_ej57w")]
+layout_mode = 2
+
+[node name="Item8" parent="GridContainer" instance=ExtResource("1_ej57w")]
+layout_mode = 2

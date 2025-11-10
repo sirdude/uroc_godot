@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1i12dnf324ik"]
+
+[ext_resource type="Texture2D" uid="uid://my7wulc317u7" path="res://gearup.png" id="1_x388d"]
+
+[node name="Goal" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 241.0
+offset_top = 88.0
+offset_right = 964.0
+offset_bottom = 558.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_x388d")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgl4molyikyik"]
+
+[ext_resource type="Script" uid="uid://bwe3pfy15oua3" path="res://Game/Levels/level_1.gd" id="1_jvh3p"]
+[ext_resource type="PackedScene" uid="uid://0x628y10lmia" path="res://Game/Chars/Emily/emily.tscn" id="2_eu6n4"]
+[ext_resource type="PackedScene" uid="uid://db503ccnq3m4o" path="res://Game/Player/player.tscn" id="3_81nw2"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_jvh3p")
+
+[node name="Emily" parent="." instance=ExtResource("2_eu6n4")]
+position = Vector2(779, 440)
+collision_mask = 2
+
+[node name="Player" parent="." instance=ExtResource("3_81nw2")]
+position = Vector2(245, 174)

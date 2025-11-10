@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://btyqjlcsfth1b"]
+
+[ext_resource type="PackedScene" uid="uid://b8sghhej4nbig" path="res://player.tscn" id="1_54lua"]
+[ext_resource type="PackedScene" uid="uid://oisu1iubbv1" path="res://gun.tscn" id="2_um5nn"]
+[ext_resource type="PackedScene" uid="uid://bivjn8srp30bg" path="res://enemy.tscn" id="3_mh1b4"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_54lua")]
+position = Vector2(684, 440)
+collision_layer = 4
+collision_mask = 3
+
+[node name="Gun" parent="Player" instance=ExtResource("2_um5nn")]
+position = Vector2(78, 10)
+rotation = 1.5708
+
+[node name="Enemy" parent="." instance=ExtResource("3_mh1b4")]
+modulate = Color(1, 0, 0.0470588, 1)
+position = Vector2(142, 140)
+collision_layer = 8
+collision_mask = 16

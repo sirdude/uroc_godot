@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceu2twim5y4i2"]
+
+[ext_resource type="Script" uid="uid://6jlbwhmproxn" path="res://movie.gd" id="1_8tigl"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_ygodc"]
+file = "movie.ogg"
+
+[node name="Movie" type="Node2D"]
+script = ExtResource("1_8tigl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(827, 455)
+zoom = Vector2(0.6, 0.6)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -131.0
+offset_top = -77.0
+offset_right = 1789.0
+offset_bottom = 1011.0
+stream = SubResource("VideoStreamTheora_ygodc")
+volume_db = 18.449999
+autoplay = true
